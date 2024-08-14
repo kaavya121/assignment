@@ -1,0 +1,605 @@
+1. The types of applications are static and dynamic. 
+
+2. Programming is the process of creating a set of instructions for a computer to perform to carry out a specific task. 
+
+3. Python is an interpreted, object oriented, high level prograaming language used for carrying out different applications, developing websites, tasks, data analysis, visualisation etc. 
+
+4.
+n = int(input("Enter your number to be checked: "))
+
+if n>0:
+    print("The number is positive.")
+elif n<0:
+    print("The number is negative.")
+else:
+    print("The number is zero.") 
+
+5. 
+
+num = int(input("Enter the number for factorial: "))
+factorial = 1
+if num < 0:
+   print("Sorry, factorial does not exist for negative numbers")
+elif num == 0:
+   print("The factorial of 0 is 1")
+else:
+   for i in range(1,num + 1):
+       factorial = factorial*i
+   print("The factorial of",num,"is",factorial)
+
+6. 
+
+a,b=0,1
+n=int(input("Enter N : "))
+print(a,end=" ")
+while b<n:
+    print(b,end=" ")
+    a,b=b,a+b 
+
+7. Memory management in python occurs in two different ways i.e. dynamic and static. In static 
+the memory is allocated and assigned while writing the program itself. Whereas in dynamic allocation
+it occurs at the time of execution i.e when running. 
+
+8. The continue statement is used to skip the remaining code inside a loop for the current iteration only. 
+
+9. Using temp 
+a = 20
+b = 30
+temp = a
+a = b
+b = temp
+print("Swapped values:")
+print("a =", a)
+print("b =", b)
+
+Without using temp 
+a = 20
+b = 30
+print("Original values:")
+print("a =", a)
+print("b =", b)
+a = a + b
+b = a - b
+a = a - b
+print("Swapped values:")
+print("a =", a)
+print("b =", b)
+
+10. 
+
+n = int(input("Enter your number: "))
+if n%2==0:
+    print("The number is even.")
+else:
+    print("The number is odd.")
+
+11. 
+a = input("Enter an alphabet: ")
+
+vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+
+if a in vowels:  
+    print(f"The character is a vowel")  
+else:  
+    print(f"The character is a consonant")  
+
+12. 
+
+a = int(input("Enter your first number a: "))
+b = int(input("Enter your second number b: "))
+c = int(input("Enter your third number c: "))
+sum = a + b + c
+if a==b or b==c or a==c:
+    print("Sum is zero.")
+else:
+    print("Sum is : ",sum)
+
+13. 
+
+a = int(input("Enter your first number: "))
+b = int(input("Enter your second number: "))
+if a==b or a+b==5 or a-b==5 or b-a==5:
+    print(" True ")
+else:
+    print(" False ")  
+
+14. 
+
+n = int(input("Enter the number upto which you want the sum: "))
+result = sum(range(n+1))
+print(result)
+
+
+15. 
+
+a = input("Enter your string: ")
+
+print("The length of the string is: ",len(a))
+
+16. 
+def count_characters(input_string):
+    charac = {}
+    for char in input_string:
+        if char in charac:
+            charac[char] += 1
+        else:
+            charac[char] = 1
+    return charac
+
+print("Character frequencies:")
+
+
+17.
+We can access elements of a list, tuple, or string using negative indices. The index -1 refers to the last element, -2 to the second last, and so on. This allows for a convenient way to access elements from the end of a sequence without needing to know its length.
+
+18. 
+main_string = input("Enter the main string: ")
+substring = input("Enter the substring: ")
+def count_sub(main_string, substring):
+    return main_string.count(substring)
+occurrence = count_sub(main_string, substring)
+print("The substring '{substring}' occurs {occurrence} times in the main string.")
+
+19.
+sentence = input("Enter your sentence")
+def c_w(sentence):
+    words = sentence.split()
+    word_freq = {}
+    for word in words:
+        if word in word_frequency:
+            word_freq[word] += 1
+        else:
+            word_freq[word] = 1
+    return word_freq
+result = c_w(sentence)
+print("Word frequencies:")
+for word, freq in result.items():
+    print(f"'{word}': {freq}")
+
+20. 
+str1 = input("Enter first string")
+str2 = input("Enter second string")
+def swap_12(str1, str2):
+    new_str1 = str2[:2] + str1[2:]
+    new_str2 = str1[:2] + str2[2:]
+    result = new_str1 + ' ' + new_str2
+    return result
+
+result = swap_12(str1, str2)
+print(result)
+
+
+21. 
+string = input("Enter your string: ")
+def adding(string):
+    if len(string) >= 3:
+        if string.endswith('ing'):
+            string += 'ly'
+        else:
+            string += 'ing'
+    return string
+
+22. 
+string = input("Enter your string: ")
+def reversal(string):
+    if len(string) % 4 == 0:
+        return string[::-1]
+    else:
+        return string
+
+23. 
+string = input("Enter your string: ")
+def replacing_12(string):
+    if len(string) < 2:
+        return ""
+    else:
+        return string[:2] + string[-2:]
+
+24. 
+original = input("Enter your string: ")
+def middle(original, inserting):
+    middle = len(original) // 2
+    new_string = original[:middle] + inserting + original[middle:]
+    return new_string
+
+25. 
+A list is a data structure in Python that is a mutable, or changeable, ordered sequence of elements. Each element or value that is inside of a list is called an item. Just as strings are defined as characters between quotes, lists are defined by having values between square brackets [ ] .
+It can be reversed using  .reverse() method. 
+
+26. 
+Using pop() method 
+
+27. 
+[25]
+
+28. 
+The append() method adds a single element to the end of the list while the extend() method adds all the elements of an iterable to the end of the list. 
+
+29. 
+numbers = int(input("Enter numbers :"))
+def operation(numbers):
+    largest = max(numbers)
+    smallest = min(numbers)
+    total_sum = sum(numbers)
+    
+    return largest, smallest, total_sum
+
+30. 
+Using sort() method 
+
+31. 
+strings = input("Enter your strings: ")
+def matching(strings):
+    count = 0
+    for string in strings:
+        if len(string) >= 2 and string[0] == string[-1]:
+            count += 1
+    return count
+
+32. 
+l1 = input("Enter your list: ")
+def duplicate(l1):
+    see = set()
+    result = []
+    for item in l1:
+        if item not in see:
+            result.append(item)
+            see.add(item)
+    return result
+
+33. 
+l1 = input("Enter your string: ")
+def is_list_empty(l1):
+    if len(l1) == 0:
+       print("Empty list. ")
+    else:
+       print("Not empty.")
+
+34. 
+list1 = input("Enter first list:")
+list2 = input("Enter second list:")
+def common(list1, list2):
+    set1 = set(list1)
+    set2 = set(list2)
+  
+    return not set1.isdisjoint(set2)
+
+35. 
+x = int(input("Enter your numbers: "))
+def generate_squares():
+    squares = [x**2 for x in range(1, 31)]
+
+    first = squares[:5]
+    last = squares[-5:]
+    
+    return first, last
+
+36. 
+l1 = input("Enter yuor list: ")
+def unique_elements(l1):
+    unique_list = list(set(l1))
+    return unique_list
+
+37.
+l1 = input("Enter your list: ")
+def list_to_string(l1):
+    return ''.join(l1)
+
+38.
+import random
+l1 = input("Enter your list: ")
+def select_random_item(l1):
+    if not l1:
+        return None 
+    else:
+        return random.choice(l1)
+
+39. 
+l1 = int(input("Enter your numbers: "))
+def second_smallest(l1):
+    unique_lst = list(set(l1))
+    if len(unique_lst) < 2:
+        return None 
+    unique_lst.sort()
+    return unique_lst[1]
+
+40. 
+l1 = int(input("Enter your numbers: "))
+def get_unique_values(l1):
+    unique_values = list(set(l1))
+    return unique_values
+
+41. 
+main_list = input("Enter your main list: ")
+sublist = input("Enter your sub list: ")
+def contains_sublist(main_list, sublist):
+    main_str = str(main_list)
+    sublist_str = str(sublist)
+    return sublist_str in main_str
+
+42. 
+l1 = input("Enter your list: ")
+def split_list(l1):
+    if len(l1) < 3:
+        raise ValueError("List must have at least three elements.")
+
+    var1, var2, var3 = l1[0], l1[1], l1[2]
+    return var1, var2, var3
+
+43. 
+Tuples are immutable objects the lists are mutable. This means that tuples cannot be changed while the lists can be modified. Tuples are more memory efficient than the lists.
+
+44. 
+def create_mixed_tuple():
+    mixed_tuple = input("Enter your mixed tuple: ")
+    return mixed_tuple
+
+45.
+t1 = input("Enter your tuple: ")
+def unzip(t1):
+    new_list = list(zip(*t1))
+    return [list(item) for item in unzip]
+
+46. 
+l1 = input("Enter your list")
+d = {}
+for a, b in l1:
+    d.setdefault(a, []).append(b)
+print(d) 
+
+47. 
+same as 46
+
+48. 
+def sort_dictionary(d, ascending=True):
+    sorted = sorted(d.items(), key=lambda item: item[1], reverse=not ascending)
+    return dict(sorted)
+
+49.
+diction = input("enter your input: ")
+def concate(*diction):
+    result_dict = {}
+    for d in diction:
+        result_dict.update(d)
+    return result_dict
+
+50. 
+dictionary = input("Enter your dictionary: ")
+def key_present(dictionary, key):
+    return key in dictionary
+
+51.
+Through keys or finding through values 
+
+52. 
+using in keyword 
+
+53. 
+start = 1 
+end = 16
+def creating(start, end):
+    num = {i: f"Value {i}" for i in range(start, end + 1)}
+    return num
+
+54. 
+my_dict = input("Enter your dictionary in the format:")
+keys_to_check = input("Enter the keys to be checked:")
+
+all_keys = all(key in my_dict for key in keys_to_check)
+
+print("All keys present: {all_keys}")
+print("All keys present: {all_keys_present}")
+
+55. 
+d1 = {'a': 10, 'b': 100}
+d2 = {'x': 20, 'y': 200}
+d = d1.copy()
+d.update(d2)
+print(d) 
+
+56. 
+keys = input("Enter your keys: " )
+values = []
+mapped_dict = dict(zip(keys, values))
+print("Mapped dictionary:", mapped_dict)
+
+57. 
+dict = input("Enter your dictionary: ")
+values = list(dict.values())
+new_values = sorted(values, reverse=True)
+3_values = new_values[:3]
+print("Highest 3 values:", top_3_values)
+
+
+58. 
+doubt 
+
+59. 
+def dict2string(s):
+    count_dict = {}
+    for char in s:
+        if char in count_dict:
+            count_dict[char] += 1
+        else:
+            count_dict[char] = 1
+    
+    return count_dict
+
+60. 
+str = input("enter our string: ")
+def dictionary_str(s):
+    count_dict = {}
+
+    for char in s:
+        if char in count_dict:
+            count_dict[char] += 1
+        else:
+            count_dict[char] = 1
+    
+    return count_dict
+
+result = dictionary_str(str)
+
+print("Character count dictionary:", result)
+
+
+61. 
+def fact(n):
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
+
+62.
+def is_in_range(number, start, end):
+    return start <= number <= end
+
+63. 
+number = int(input("Enter your number: "))
+def perfect(number):
+    if number < 1:
+        return False
+    sum_nums = sum(i for i in range(1, number) if number % i == 0)
+    return sum_nums == number
+
+64. 
+s = input("Enter your string: ")
+def palindrome(s):
+    s = s.lower()
+    cleaned_s = ''.join(char for char in s if char.isalnum())
+    return cleaned_s == cleaned_s[::-1]
+
+65. 
+User defined functions and inbuilt function 
+
+66. 
+using random.choice()
+
+67. 
+Using random.randrange() 
+
+68. 
+using random.randint()
+
+69.
+seed()
+
+70. 
+shuffle()
+
+71. 
+The key function for working with files in Python is the open() function. The open() function takes two parameters; filename, and mode. 
+
+72. 
+file_path = ''
+with open(file_path, 'r') as file:
+    file_content = file.read()
+print(file_content)
+
+73. 
+file_path = input('Enter your file path')
+text_to_append = input("Enter text to append")
+with open(file_path, 'a') as file:
+    file.write(text_to_append)
+
+74. 
+def read_first(file_path, n):
+    with open(file_path, 'r') as file:
+        for i in range(n):
+            line = file.readline()
+            if line:
+                print(line, end='') 
+            else:
+                break
+
+75. 
+def read_last(file_path, n):
+    with open(file_path, 'r') as file:
+        lines = file.readlines()
+    
+    last_n_lines = lines[-n:] if n <= len(lines) else lines
+
+    for line in last_n_lines:
+        print(line, end='')
+
+76.  
+file_path = input('Enter your file path')
+text_to_append = input("Enter text to append")
+def read_file_to_list(file_path):
+    lines_list = []
+    with open(file_path, 'r') as file:
+        for line in file:
+            lines_list.append(line.strip()) 
+    return lines_list
+
+77. 
+doubt 
+
+78. 
+doubt
+
+79.
+file_path = input('Enter your file path')
+def count_line(file_path):
+    line_count = 0
+    with open(file_path, 'r') as file:
+        for _ in file:
+            line_count += 1
+    
+    return line_count
+
+80. 
+doubt 
+
+81. 
+file_path = input('Enter your file path')
+data_list = input("Enter the list: ")
+def write_list_to_file(file_path, data_list):
+    with open(file_path, 'w') as file:
+        for item in data_list:
+            file.write(f"{item}\n")
+
+82. 
+not done 
+
+83. 
+Errors and exceptions can lead to unexpected behavior or even stop a program from executing. Python provides various functions and mechanisms to handle these issues and improve the robustness of the code. In this tutorial, we will learn about various error types and learn about built-in functions with examples. 
+
+An error is an issue in a program that prevents the program from completing its task. In comparison, an exception is a condition that interrupts the normal flow of the program. Both errors and exceptions are a type of runtime error, which means they occur during the execution of a program. 
+
+84. 
+We can have multiple try blocks in a program but only one except statement with each try block.
+
+85. 
+The code in the relevant try block has completed. The code in the relevant try block does not raise an exception. 
+
+86. 
+Yes, a single block of except statements in Python can handle multiple exceptions. This feature allows you to handle different types of exceptions using a single block of code. 
+
+87. 
+The finally block always executes when the try block exits. This ensures that the finally block is executed even if an unexpected exception occurs. 
+
+88. 
+1 == 1 would return True and "1" == "1" would return True, but the string, "1", is not equal to the integer, 1. Because they are not comparable types. If you put a number in quotation marks it becomes a string. 
+
+89.
+
+90. 
+
+def get_odd_number():
+    while True:
+        try:
+            num = int(input("Please enter an odd number: "))
+            if num % 2 != 1:
+                raise ValueError("The number is not odd.")
+            return user_input
+        
+        except ValueError as ve:
+            print(ve)
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")
+
+
+
+
+
